@@ -16,13 +16,57 @@
 {% endblock %}
 
 {% block content %}
-<div class="main">
 
-{% block navbar %}
-    {% include 'navbar.html' %}
-{% endblock %}
-</div>
+<body class="container-fluid" style=" background-image: url(https://images.unsplash.com/photo-1530533718754-001d2668365a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);background-size: cover;max-height: 200px;">
+
+    {% block navbar %}
+
+    <!--Navbar -->
+    <div class="container-fluid " style="background-color:black;font-size: large;">
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark primary-color">
+            <a class="navbar-brand" href="#">Pitch</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+            aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('main.index')}}"> Home
+                        
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('auth.login')}}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('auth.login')}}">Register</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> Profile </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+                        <a class="dropdown-item" href="#">My account</a>
+                        <a class="dropdown-item" href="{{url_for('auth.logout')}}">Log out</a>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--/.Navbar -->
+
+    {% endblock %}
+
+
+
+
+</body>
 {% endblock%}
+
+
 
 
 

@@ -1,19 +1,22 @@
 {% extends 'base.html' %}
 {% macro display_pitches(posts) %}
-<div class="container-fluid">
-    <div>
-        <br><br>
-    </div>
-    <div style="background-color: rgba(255, 255, 255, 0.829);" class="jumbotron ">
+<div class="container-fluid"  style=" background-image: url(https://images.unsplash.com/photo-1530533718754-001d2668365a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170);background-size: cover;min-height: 970px;max-height: 200px;">
+<!-- 
+<div class="container-fluid" style=" background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1129');background-size: cover;min-height: 980px;"> -->
+    
+    <div style="background-color: rgba(255, 255, 255, 0.753);" class="jumbotron-fluid">
         <div class="overlay">
             <h1 class="">Pitches</h1>
-            <a href="/new_post"><button class="btn">New Pitch</button></a>
+            <a href="/new_post"><button style="font-size: large;" class="btn">New Pitch</button></a>
         </div>
     </div>
-    <div class="card-columns">
+    <div>
+        <br> <br>
+    </div>
+    <div  style="font-size:large ;" class="card-columns">
         {% if posts %}
         {% for my_post in posts %}
-        <div style="background-color: rgba(255, 255, 255, 0.829);" class="card">
+        <div style="background-color: rgba(255, 255, 255, 0.753);" class="card">
             <div class="card-body">
                 <p>{{my_post.post}}</p>
                 <p><br> Title: {{my_post.title}}</p>
@@ -32,5 +35,17 @@
         {% endfor %}
         {% endif %}
     </div>
+    {% block footer%}
+    <div class="page-footer font-small blue pt-4"class="container-fluid" style="position: absolute;
+    bottom: 0;
+    width: 100%;
+     background-color: black;" >
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="font-size:large ; color:white">© 2020 Copyright:
+            <a href="/"> Pitch.com</a>
+        </div>
+        <!-- Copyright -->
+    </div>
+    {% endblock%}
 </div>
 {% endmacro %}
