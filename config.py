@@ -18,7 +18,6 @@ class Config:
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
 
-
 class ProdConfig(Config):
     '''
     Pruduction  configuration child class
