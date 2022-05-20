@@ -1,5 +1,5 @@
-export SECRET_KEY=super secret key
+export SECRET_KEY=supersecret 
 export MAIL_USERNAME=phifeichemu@gmail.com
 export MAIL_PASSWORD=Cheruiyot@44
 
-python3.9 manage.py server
+python3.10 manage.py server
